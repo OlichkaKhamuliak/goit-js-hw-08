@@ -8,7 +8,6 @@ const galleryList = document.querySelector('.gallery');
 galleryList.insertAdjacentHTML('beforeend', createMarkup(galleryItems))
 
 function createMarkup(arr) {
-
     return arr.map(({ preview, description, original }) =>  
         `<li class="gallery__item">
    <a class="gallery__link" href="${original}">
