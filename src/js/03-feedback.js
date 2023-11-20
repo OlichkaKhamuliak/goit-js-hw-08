@@ -23,15 +23,18 @@ function handleInput(evt) {
 }
 
 function handleSubmit(event) {
-    event.preventDefault();  
-    const email = userEmail.value;
-    const message = userMassage.value;
+  event.preventDefault();
+  const email = userEmail.value;
+  const message = userMassage.value;
 
   if (email === "" || message === "") {
     return alert("Please fill in all the fields!");
   }
 
-  console.log(`Email: ${email}, Message: ${message}`);
+  console.log(`{
+    Email: ${ email },
+    Message: ${ message }
+  }`);
     feedbackForm.reset();
     localStorage.removeItem(USER_DATA);
 }
